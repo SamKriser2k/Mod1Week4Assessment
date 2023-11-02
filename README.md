@@ -37,21 +37,29 @@ To Edit the README:
     A. `var bench = new Chair(24, true);`  
     B. `Chair bench = new Chair(24, true);`  
     C. `var bench = new(24, true);`  
-    D. `Chair bench = new(24, true);`  
+    D. `Chair bench = new(24, true);`
+
+   I believe that the correct answer is C, as all of the other options are telling the program to create a new instance of chair, but option C isn't mentioning anywhere what we are creating a new instance of, just naming it and telling us to create a new instance of something
+   
     
     
-2. Imagine you are interviewing for your first job.  The interviewer asks "What can you tell me about OOP?".  Write your response below:
+3. Imagine you are interviewing for your first job.  The interviewer asks "What can you tell me about OOP?".  Write your response below:
 
+OOP, or object oriented programming, is a model of computer programming that relies on objects to organize programs into simple and **reusable** pieces of code. OOP uses the process of instantation to create new instances of objects from a class definition by usng the keyword "new". You can create as many instances of an object as you want with OOP, thus making it very easily reusable, which is especially for larger projects. 
 
-3. What is Automated Testing?
+4. What is Automated Testing?
 
+Automated testing is a seperate program that verifies the functionality of our primary program. An example of this would be Amazon having functions, such as make an order and take an order, being tested on an Amazon test site with tests like "verify that we can make an order" and "verify that we can take an order"
 
-4. What are some benefits of creating tests for our projects?
+5. What are some benefits of creating tests for our projects?
 
+There are a multitude of benefits to creating tests for our projects. One primary one is when working with bigger programs, such as at jobs we may have in the future, you may not be able to test your newly written code with a writeline or a full run if it relies on other pieces of information that you don't have. In this case, you would write tests to confirm the new addition to the program does exactly what it is supposed to do. Another benefit of creating tests is readability for future programmers who may be working on the code you wrote. They can see exactly how each behavior works based on the tests you performed. Testing also allows you to catch more things a user may do when using your program, so you can adjust for the mistakes they may make.
 
-5. When you create a test project, you do not immediately have access to the class(es) in the project that you are testing.  What do you need to do in order to have access to those classes?
+6. When you create a test project, you do not immediately have access to the class(es) in the project that you are testing.  What do you need to do in order to have access to those classes?
 
-6. Take a look at the class below.  Write out the **names** of each test you would write to verify that this class is working. You do not need to write the whole test, just what you would **name** the test methods. Ex: `IsCreatedWithTwoArguments()`
+To have access to the classes, you will first right click on your unit tests folder in the solution explorer on the right side of the screen in VS. Then, youll scroll down to the "add" drop down menu, and select "project reference." finally, you will check the box of the class(es) you wish to have access to for testing, and you should be able to reference them to test them.
+
+7. Take a look at the class below.  Write out the **names** of each test you would write to verify that this class is working. You do not need to write the whole test, just what you would **name** the test methods. Ex: `IsCreatedWithTwoArguments()`
 ```c#
     public class Vehicle
     {
@@ -72,15 +80,21 @@ To Edit the README:
             return summary;
         }
 
+// CreatesAndReturnsCarSummary
+
         public void Drive()
         {
             MilesDriven += 5;
         }
 
+// DriveAddsMilesToCarAfterDriving
+
         public void Paint(string newColor)
         {
             Color = newColor;
         }
+
+// PaintChangesCarPaintColor
     }
 ```
 
