@@ -80,7 +80,7 @@ To have access to the classes, you will first right click on your unit tests fol
             return summary;
         }
 
-// CreatesAndReturnsCarSummary
+// SummaryCreatesAndReturnsCarDetails 
 
         public void Drive()
         {
